@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+/* Global interactive elements cursor pointer */
+button,
+[role="button"],
+a,
+select,
+summary,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="checkbox"],
+input[type="radio"],
+input[type="file"] {
+  cursor: pointer;
+}
+
+select {
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #374151;
+}
+
+select:focus {
+  outline: none;
+  border-color: #8931BA;
+  box-shadow: 0 0 0 2px rgba(137, 49, 186, 0.2);
+}
+
+select option {
+  background-color: #ffffff;
+  color: #1f2937;
+  padding: 8px 12px;
+}
+
+select option:hover,
+select option:focus,
+select option:checked {
+  background-color: rgba(137, 49, 186, 0.12) !important;
+  color: #8931BA !important;
+  font-weight: 600;
+}
+
+button:disabled,
+[role="button"][aria-disabled="true"],
+input:disabled,
+select:disabled {
+  cursor: not-allowed;
+}
+
+/* Hide scrollbar but allow scrolling */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none !important;  /* IE and Edge */
+  scrollbar-width: none !important;     /* Firefox */
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.2s ease-in-out;
+}
+
+/* Remove default focus outlines from Recharts elements */
+.recharts-wrapper:focus,
+.recharts-surface:focus,
+.recharts-sector:focus,
+.recharts-pie-sector:focus,
+.recharts-layer:focus,
+.recharts-text:focus,
+path:focus,
+g:focus {
+  outline: none !important;
+}
+
+/* Custom Dropdown option hover and active colors */
+.custom-dropdown-item {
+  color: #374151;
+  background-color: transparent;
+  transition: all 0.15s ease-in-out;
+}
+
+.custom-dropdown-item:hover {
+  background-color: #f5ebfa !important;
+  color: #8931BA !important;
+}
+
+.custom-dropdown-item.is-selected {
+  background-color: #f1def7 !important;
+  color: #8931BA !important;
+  font-weight: 600;
+}
+
+
+
